@@ -1,16 +1,11 @@
 {
-	"main": "dist/_worker.js/index.js",
-	"name": "dreary-debris",
-  "compatibility_date": "2026-01-19",
-  "compatibility_flags": [
-    "nodejs_compat",
-    "global_fetch_strictly_public"
-  ],
-	"assets": {
-		"binding": "ASSETS",
-		"directory": "./dist"
-	},
-	"observability": {
-    "enabled": true
+  "name": "radiostrikehpsystem",
+  // 修正前: "main": "dist/_worker.js/index.js" (もしこうなっていたら)
+  // 修正後: ディレクトリ自体を指定します
+  "main": "dist/_worker.js", 
+  "compatibility_date": "2026-04-04",
+  "assets": {
+    "directory": "dist/client", // 静的ファイル（画像やCSS）の場所
+    "binding": "ASSETS"
   }
 }
