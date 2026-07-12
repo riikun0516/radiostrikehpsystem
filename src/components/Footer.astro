@@ -36,7 +36,7 @@ const legalLinks = [
             ))}
           </ul>
         </div>
-        
+
         <div class="nav-column">
           <h3>Legal</h3>
           <ul>
@@ -49,6 +49,14 @@ const legalLinks = [
     </div>
 
     <div class="footer-bottom">
+      <form class="site-seal" action="https://sitesealinfo.pubcert.jprs.jp/SiteSealReference" name="SiteSealReference" method="post" target="_blank">
+        <!--お客様の証明ページを別ウィンドウにて開きます。-->
+        <input type="image" name="Sticker" src="https://api.radiostrike.jp/uploads/jprs_siteseal_140x59_DV.png" alt="クリックして証明書の内容をご確認ください。" oncontextmenu="return false;" />
+        <!--ダウンロードしたサイトシール画像のパス名を指定します。-->
+        <input type="hidden" name="certificateCn" value="*.radiostrike.jp" />
+        <input type="hidden" name="certificateClass" value="DV" />
+        <!--証明書のコモンネーム及び証明書種別（DVもしくはOV）を指定します。-->
+      </form>
       <p class="copyright">&copy; {currentYear} RadioStrike All Rights Reserved.</p>
     </div>
   </div>
@@ -135,6 +143,14 @@ const legalLinks = [
     border-top: 1px solid #333;
     padding-top: 30px;
     text-align: center;
+  }
+
+  .site-seal {
+    margin-bottom: 15px;
+  }
+
+  .site-seal input[type="image"] {
+    max-width: 100%;
   }
 
   .copyright {
